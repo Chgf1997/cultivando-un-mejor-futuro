@@ -11,7 +11,7 @@ export default ({ pts, ptsMax }) => {
                 <div 
                     className="bar-fill" 
                     style={{
-                        width: `${pts}%`
+                        width: `${pts/10}%`
                     }}
                 />
             </div>

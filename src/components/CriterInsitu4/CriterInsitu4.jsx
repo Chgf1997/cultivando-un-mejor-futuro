@@ -33,7 +33,7 @@ export default () => {
         let verifyTrush = pregunta.opcion.correcta.includes(option.titulo);
 
         // Incrementar puntuaje
-        let pts = verifyTrush ? 10 * estado.multiplicador : 0;
+        let pts = verifyTrush ? estado.incrementPts : 0;
         // Verificar Vidas
         let intentos = verifyTrush ? estado.intentos : estado.intentos -1;
 
@@ -71,6 +71,19 @@ export default () => {
     const continuar = () => {
         if (estado.escena !== 'feedback'){
             return;
+        }
+
+        if (!estado.intentos){
+            //Game Over
+            setPregunta({});
+            setFoodList([])
+            
+            return setEstado({
+                ...estado,
+                modo: 'talk',
+                escena: "feedbackEnd",
+            })
+
         }
 
         let foodQuestions = [...comida.preguntas];
@@ -124,16 +137,13 @@ export default () => {
             escena: 'question',
             intentos: 3,
             puntaje: 0,
-            multiplicador: 1,
+            incrementPts: 50,
             puntajeMax: 1000,
             racha: 0,
             respuesta: null
         })
 
-        setFoodList([
-            foodListData[0],
-            foodListData[1]
-        ]);
+        setFoodList(foodListData);
         
         setComida(food);
         setPregunta(food.preguntas[0]);
@@ -200,6 +210,10 @@ export default () => {
         }
     }
 
+    const gameOver = () => {
+        console.log('gameOver')
+    }
+
     useEffect(()=> {
         // console.log("Iniciar")
         // tutorial();
@@ -218,6 +232,7 @@ export default () => {
                             <CriterHeader 
                                 estado={estado} 
                                 handleChangeEscena={handleChangeEscena}
+                                gameOver={gameOver}
                             />
 
                             <div className="box-game">
