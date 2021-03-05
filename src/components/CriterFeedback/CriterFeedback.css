@@ -1,0 +1,39 @@
+#feedback {
+    position: relative;
+    /* width: 100%; */
+    /* z-index: -1; */
+}
+
+.feedback-container {
+    position: absolute;
+    /* background: red; */
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    top: -400px;
+
+    z-index: -1;
+}
+
+.feedback-bg-container {
+    position: relative;
+}
+
+.feedback-bg {
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    top: -70px;
+    background-image: url(../../assets/vectores/VEC_FONDO_BARRA.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: -5;
+}
+
+.persons-container {
+    position: absolute;
+    width: 100%;
+}

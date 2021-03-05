@@ -1,0 +1,30 @@
+.person-container {
+    /* position: relative; */
+    /* position: absolute; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.person-container + .left {
+    /* display: flex; */
+    justify-content: flex-start;
+}
+
+.person-container + .right {
+    /* display: flex; */
+    justify-content: flex-end;
+}
+
+.personage {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+
+    z-index: 4000;
+}
+
+.personage img {
+    height: 250px;
+}

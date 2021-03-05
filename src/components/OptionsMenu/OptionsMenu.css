@@ -1,0 +1,21 @@
+#options {
+    position: absolute;
+    /* background-color: yellow; */
+    /* min-width: 120px; */
+    
+    /* max-height: 80vh; */
+    /* width: 100%; */
+}
+
+.options-container {
+    position: relative;
+}
+
+.options-container-small {
+    width:  30%;
+}
+
+/* .option-md {
+    width: 200px;
+    background-color: violet;
+} */
