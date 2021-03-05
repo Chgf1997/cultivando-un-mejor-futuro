@@ -1,10 +1,6 @@
-import './CriterFeedback.css';
+import classNames from 'classnames'
 
-// import vect_feednoticia from '../../assets/vectores/VECT_FEED_NOTICIA_01.svg'
-// import vect_correcto from '../../assets/vectores/VECT_CORRECTO.svg'
-// import vect_incorrecto from '../../assets/vectores/VECT_INCORRECTO.svg'
-// import vect_ramader from '../../assets/vectores/VECT_RAMA_DER.svg'
-// import vect_ramaizq from '../../assets/vectores/VECT_RAMA_IZQ.svg'
+import './CriterFeedback.css';
 
 import Personage from './Personages/Personage';
 import BoxTalk from './BoxTalk/BoxTalk.jsx';
@@ -13,7 +9,8 @@ export default ({
     estado: {escena, modo, respuesta, personaje},
     pregunta,
     continuar, 
-    reiniciar
+    reiniciar,
+    smallWidth
 }) => {
     // console.log(pregunta, 'pre')
 
@@ -32,7 +29,6 @@ export default ({
     }
 
     const textTalk = () => {
-        console.log('texttalk');
         switch(escena){
             case 'feedback':
                 return pregunta.opciones
@@ -47,8 +43,18 @@ export default ({
     }
 
     return (
-        <div id="feedback">
-            <div className="feedback-container">
+        <div 
+            id="feedback" 
+            className={classNames({
+                "small": smallWidth
+            })}
+        >
+            <div 
+                className= {classNames({
+                    "feedback-container": true,
+                    "small": smallWidth
+                })}
+            >
                 {/* <div className="feedback-bg-container"> */}
                     {/* <div className="feedback-bg" /> */}
                 {/* </div> */}

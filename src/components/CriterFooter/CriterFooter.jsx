@@ -1,10 +1,11 @@
+
 import './CriterFooter.css';
 
 function CriterFooter({ estado, pregunta }) {
     return (
-        <div>
+        <>
             {estado.modo === 'game' ? 
-                <div id="footer">
+                <div className="footer" >
                     <div>
                         { pregunta.contenido }
                     </div>
@@ -12,7 +13,7 @@ function CriterFooter({ estado, pregunta }) {
                 :
                 null
             }
-        </div>
+        </>
     );
 }
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import classNames from 'classnames';
 
 import CriterHeader from '../CriterHeader/CriterHeader';
 import Content from '../Content/Content';
@@ -13,13 +14,14 @@ import introConversation from './Intro/intro'
 import Modal from '../Utils/Modal/Modal';
 import Instructions from './Intro/Instructions'
 
+const smallWidth = window.innerWidth < 1000;
+
 export default () => {
-    const smallWidth = window.innerWidth < 900;
     const [estado, setEstado] = useState({});
     const [foodList, setFoodList] = useState([]);
     const [comida, setComida] = useState({});
     const [pregunta, setPregunta] = useState({});
-    const [modalIntro, setModalIntro] = useState(false);
+    const [modalIntro, setModalIntro] = useState(true);
     const [conversationIntro, setConversationIntro] = useState([]);
 
     const contestar = (option) => {
@@ -67,12 +69,10 @@ export default () => {
     };
 
     const continuar = () => {
-        // cambiar de pregunta, hasta finalizar el juego
-        // console.log('continuar', {
-        //     comida,
-        //     foodList,
-        //     pregunta
-        // })
+        if (estado.escena !== 'feedback'){
+            return;
+        }
+
         let foodQuestions = [...comida.preguntas];
         let newComida = {};
        
@@ -172,51 +172,88 @@ export default () => {
         setPregunta(question);
     }
 
+    const handleChangeEscena = (type) => {
+
+        if (type === 'pyramid' && estado.escena === 'pyramid')
+        {
+            return ;
+        }
+        
+        if (type === 'pyramid'){
+            let newEstado = {
+                ...estado,
+                escena: 'pyramid',
+                modo: 'talk',
+                prevEscena: estado.escena,
+                prevModo: estado.modo
+            }
+
+            setEstado(newEstado)
+        }else if (estado.escena === 'pyramid' && estado.prevModo) {
+            setEstado({
+                ...estado,
+                prevModo: null,
+                prevEscena: null,
+                modo: estado.prevModo,
+                escena: estado.prevEscena
+            })
+        }
+    }
+
     useEffect(()=> {
         // console.log("Iniciar")
         // tutorial();
-        iniciar();
+        // iniciar();
     }, [])
 
     return (
-        <div style={{
-            width: '100%',
-            height: '100%'
-        }}>
+        <div className="app">
             {(estado.modo === 'game' || estado.modo === 'talk') &&
                 <div className="container">
-                    <div className="container-game">
-                        <CriterHeader 
-                            estado={estado} 
-                        />
-
-                        <div className="box-game">
-                            <Content 
-                                smallWidth={smallWidth}
-                                comida={comida}
-                                estado={estado}
-
+                    <div className={classNames({
+                        "container-game": true,
+                        "small": smallWidth
+                    })}>
+                        <div className="game">
+                            <CriterHeader 
+                                estado={estado} 
+                                handleChangeEscena={handleChangeEscena}
                             />
-                            <OptionsMenu 
-                                smallWidth={smallWidth}
-                                estado={estado}
-                                pregunta={pregunta}
-                                contestar={contestar} 
+
+                            <div className="box-game">
+                                <Content 
+                                    smallWidth={smallWidth}
+                                    comida={comida}
+                                    estado={estado}
+
+                                />
+                                {estado.modo === 'game' &&
+                                    <OptionsMenu 
+                                        smallWidth={smallWidth}
+                                        estado={estado}
+                                        pregunta={pregunta}
+                                        contestar={contestar} 
+                                    />
+                                }
+                            </div>
+
+                            <CriterFooter 
+                                estado={estado} 
+                                pregunta={comida} 
                             />
                         </div>
 
-                        <CriterFooter 
-                            estado={estado} 
-                            pregunta={comida} 
-                        />
-
                     </div>
+
+            {/* Fondo Barra */}
+
                     <div className="feedback-bg-container">
                         <div className="feedback-bg" />
                     </div>
 
-                    {/* Personajes */}
+            {/* Personajes */}
                     <CriterFeedback 
+                        smallWidth={smallWidth}
                         estado={estado}
                         pregunta={pregunta}
                         continuar={estado.modo === 'talk'?  

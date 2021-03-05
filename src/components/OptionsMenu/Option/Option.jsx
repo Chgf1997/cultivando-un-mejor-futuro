@@ -57,7 +57,7 @@ export default ({
         <div 
             className={classNames({
                 "option-container": true,
-                "option-md": !smallWidth,
+                // "option-md": !smallWidth,
                 [`option-color_${color}`]: true,
                 [`option-disabled-${index % 2}`]: styleDisabled()
             })} 

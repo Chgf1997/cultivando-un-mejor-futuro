@@ -7,7 +7,10 @@ import vect_piramide from '../../assets/vectores/VEC_BTN_PIRAMIDE.svg'
 
 import BarScore from './BarScore/BarScore'
 
-function CriterHeader({ estado: {intentos, puntaje, puntajeMax} }) {
+function CriterHeader({ 
+    estado: {intentos, puntaje, puntajeMax},
+    handleChangeEscena
+}) {
     return (
         <>
             <div id="header-container">
@@ -31,9 +34,11 @@ function CriterHeader({ estado: {intentos, puntaje, puntajeMax} }) {
                 <div id="header-icons-menu">
                     <img src={vect_piramide} 
                         className="header_icon" 
+                        onClick={()=> handleChangeEscena('pyramid')}
                     />
                     <img src={vect_home} 
                         className="header_icon" 
+                        onClick={()=>handleChangeEscena('home')}
                     />
                 </div>
             </div>

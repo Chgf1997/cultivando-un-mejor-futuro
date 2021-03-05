@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import CriterInsitu4 from './components/CriterInsitu4/CriterInsitu4';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>

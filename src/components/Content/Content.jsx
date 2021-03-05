@@ -3,11 +3,16 @@ import "./Content.css";
 
 import imgPyramid from '../../assets/vectores/VEC_PIRAMIDE_2.svg'
 
-import food_1 from "../../assets/comidas/COMIDA_1.svg"
-import food_2 from "../../assets/comidas/COMIDA_2.svg"
-import food_3 from "../../assets/comidas/COMIDA_3.svg"
-import food_4 from "../../assets/comidas/COMIDA_4.svg"
-import food_5 from "../../assets/comidas/COMIDA_5.svg"
+import food_1 from "../../assets/comidas/01.png"
+import food_2 from "../../assets/comidas/02.png"
+import food_3 from "../../assets/comidas/03.png"
+import food_4 from "../../assets/comidas/04.png"
+import food_5 from "../../assets/comidas/05.png"
+import food_6 from "../../assets/comidas/06.png"
+import food_7 from "../../assets/comidas/07.png"
+import food_8 from "../../assets/comidas/08.png"
+import food_9 from "../../assets/comidas/09.png"
+import food_10 from "../../assets/comidas/10.png"
 
 export default ({ smallWidth, comida, estado })=> {
 
@@ -18,6 +23,11 @@ export default ({ smallWidth, comida, estado })=> {
             case 3: return food_3;
             case 4: return food_4;
             case 5: return food_5;
+            case 6: return food_6;
+            case 7: return food_7;
+            case 8: return food_8;
+            case 9: return food_9;
+            case 10: return food_10;
         }
     }
 
@@ -114,7 +124,7 @@ export default ({ smallWidth, comida, estado })=> {
             id="content" 
             className={classNames({
                 "content": true,
-                "contentSmall": smallWidth
+                "intro": estado.modo !== 'game'
             })}
         >
             {showContent()}

@@ -2,7 +2,7 @@
     width: 100%;
     /* width: var(--question-width);
     min-width: var(--question-min-width); */
-    height: var(--header-height);
+    height: 10%;
     /* margin: var(--header-margin) auto 0px; */
 
     display: flex;
