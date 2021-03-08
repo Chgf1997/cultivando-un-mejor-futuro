@@ -52,7 +52,7 @@ export default ({
             <div 
                 className= {classNames({
                     "feedback-container": true,
-                    "small": smallWidth
+                    "back": escena === 'question'
                 })}
             >
                 {/* <div className="feedback-bg-container"> */}
@@ -61,7 +61,7 @@ export default ({
                 
                 <div className="persons-container">
                     {/* Personaje luisa */}
-                    <div className="person-container left">
+                    <div className="person-container">
                         {   (   
                                 (modo === 'talk' && personaje === 'luisa') ||
                                 escena === 'question' ||
@@ -73,6 +73,7 @@ export default ({
                                 text={textTalk()}
                                 title={titleTalk()}
                                 onClick={()=> {continuar()}}
+                                side="left"
                             />
                         }
                         <Personage
@@ -95,6 +96,7 @@ export default ({
                                 text={textTalk()}
                                 title={titleTalk()}
                                 onClick={()=> {continuar()}}
+                                side="right"
                             />
                         }
                         <Personage

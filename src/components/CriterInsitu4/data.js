@@ -3,10 +3,11 @@ export default  [
     {
         "id": 1,
         "personaje": "Alisson Ahue",
-        "contenido": "Nuxmae. Estoy en Leticia. Les muestro la foto de mi almuerzo, porque estoy sintiendo mucha sed, tomo frutiño pero no se me quita. Hoy comí pescado, yuca amarilla cocinada y tacacho de platano verde. ¿Qué opinan?",
+        "contenido": "Nuxmae (Así saludamos acá). Estoy en Leticia. Les muestro la foto de mi almuerzo, porque estoy sintiendo mucha sed, tomo frutiño pero no se me quita.",
+        "pregunta_personaje": "Hoy comí pescado, yuca amarilla cocinada y tacacho de platano verde. ¿Qué opinan?",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -40,7 +41,7 @@ export default  [
                     }
                 ],
                 "opcion": {
-                    "correcta": "1 grupo",
+                    "correcta": ["1 grupo", "4 grupo"],
                     "respuesta_afirmativa": "¡Así es!",
                     "respuesta_negativa": "¡Observa con atención!"
                 },
@@ -92,10 +93,11 @@ export default  [
     {
         "id": 2,
         "personaje": "Felipe Peña",
-        "contenido": "Hola chicos. Soy Felipe Peña y vivo en Bogotá. Les envío la foto de lo que comí hoy al medio día. Creo que me alimento muy bien, porque nunca como harinas. ¿Ustedes que creen?",
+        "contenido": "Hola chicos. Soy Felipe Peña y vivo en Bogotá. Les envío la foto de lo que comí hoy al medio día.Hola chicos. Soy Felipe Peña y vivo en Bogotá. Les envío la foto de lo que comí hoy al medio día. ",
+        "pregunta_personaje": "Creo que me alimento muy bien, porque nunca como harinas. ¿Ustedes que creen? ",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -185,10 +187,11 @@ export default  [
     {
         "id": 3,
         "personaje": "Erika Masmela",
-        "contenido": "Me llamo Erika Masmela y vivo en un pueblo que se llama Paz de Ariporo. Hoy almorcé la comida tipica del Casanare, Chiguiro asado. Mi abuela dice que el chiguiro es lo mejor para la salud pero a mí me duele mucho la cabeza. ¿Qué opinan de mi almuerzo?",
+        "contenido": "Me llamo Erika Masmela y vivo en un pueblo que se llama Paz de Ariporo. Hoy almorcé la comida tipica del Casanare, Chiguiro asado.",
+        "pregunta_personaje": "Mi abuela dice que el chiguiro es lo mejor para la salud pero a mí me duele mucho la cabeza. ¿Qué opinan de mi almuerzo?",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -278,10 +281,11 @@ export default  [
     {
         "id": 4,
         "personaje": "Jairo Arias",
-        "contenido": "Me llamo Jairo Arias.Vivo en Malanbo. Mi almuerzo de hoy fue Arroz clavado, que es arroz con mucho queso y paracones. Pero aja no tengo ganas de nada :( , ¿Qué les parece?",
+        "contenido": "Me llamo Jairo Arias.Vivo en Malanbo. Mi almuerzo de hoy fue Arroz clavado, que es arroz con mucho queso y paracones.",
+        "pregunta_personaje": " Pero aja no tengo ganas de nada :( ¿Qué les parece? ",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -370,11 +374,11 @@ export default  [
 
     {
         "id": 5,
-        "personaje": "Yamile Peralta",
-        "contenido": "Buenas pelados. Me llamo Yamile Peralta. Soy del Pacífico, nosotrso almorzamos casi siempre Asado de Pingua y diferentes pescados. Pero aveces siento que no tengo alientos para ir a pescar temprano. ¿Estoy comiendo bien?",
+        "contenido": "Buenas pelados. Me llamo Yamile Peralta. Soy del Pacífico, nosotrso almorzamos casi siempre Asado de Pingua y diferentes pescados.",
+        "pregunta_personaje": "Pero aveces siento que no tengo alientos para ir a pescar temprano. ¿Estoy comiendo bien?",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -462,11 +466,11 @@ export default  [
     // Pregunta 6 Medellin Antioquia
     {
         "id": 6,
-        "personaje": "Salome Herrera",
-        "contenido": "Que hubo pues Y&L. Soy Salome Herrera. Últimamente me duele mucho la cabeza :( Aquí les comparto la foto de lo que almorcé hoy. ¿Me estoy alimentando saludablemente?",
+        "contenido": "Que hubo pues Y&L.  Soy Salome Herrera. Últimamente me duele mucho la cabeza :( ",
+        "pregunta_personaje": "Aquí les comparto la foto de lo que almorcé hoy. ¿Me estoy alimentando saludablemente? ",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -559,11 +563,11 @@ export default  [
     // Pregunta 7 Santa Fe de Antioquia
     {
         "id": 7,
-        "personaje": "Mrtín Herrera",
-        "contenido": "Hola pues Yeiner y Luisa. Me llamo Martín Herrera. Pues hoy almorcé artos frijoles, chorizo y arepita. Creo que estoy comiendo demasiado porque tengo dolores de estómago. ¿Creen que estoy almorzando mucho?",
+        "contenido": "Hola pues Yeiner y Luisa. Me llamo Martín Herrera. Pues hoy almorcé artos frijoles, chorizo y arepita. ",
+        "pregunta_personaje": "Creo que estoy comiendo demasiado porque tengo dolores de estómago. ¿Creen que estoy almorzando mucho? ",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -657,11 +661,11 @@ export default  [
     // Pregunta 8 Bucaramanga Santander
     {
         "id": 8,
-        "personaje": "Sharon Peralta",
-        "contenido": "Hola manitos. soy Sharon Peralta. Hace unos días siento muchas ganas de dormir :( Les envío la foto de mi almuerzo. Hoy comí pepitoria, que es arroz revuelto con menudencias de cabrito. También comí cabrito asado. ¿qué opinan? ¿Cómo estoy almorzando?",
+        "contenido": "Hola manitos. soy Sharon Peralta. Hace unos días siento muchas ganas de dormir :( Les envío la foto de mi almuerzo. ",
+        "pregunta_personaje": "Hoy comí pepitoria, que es arroz revuelto con menudencias de cabrito. También comí cabrito asado. ¿Qué opinan? ¿Cómo estoy almorzando?",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -752,11 +756,11 @@ export default  [
     // Pregunta 9 La Chorrera Amazonas
     {
         "id": 9,
-        "personaje": "Jhon Coello",
-        "contenido": "Mi nombre es Jhon Coello. Soy de la comunidad indígena Tikuna. Casi siempre almuerzo con diferentes pescados. Hoy comí cucha asada, fariña y açaí. La fariña es una harina que hacemos de la yuca amarilla y el açaí es una fruta de acá del Amazonas. No sé porque me están saliendo unas manchas en la piel de los brazos. ¿Creen que debo comer algo más?",
+        "contenido": "Mi nombre es Jhon Coello. Soy de la comunidad indígena Tikuna. Casi siempre almuerzo con diferentes pescados. Hoy comí cucha asada, fariña y açaí. La fariña es una harina que hacemos de la yuca amarilla y el açaí es una fruta de acá del Amazonas.",
+        "pregunta_personaje": "No sé porque me están saliendo unas manchas en la piel de los brazos. ¿Creen que debo comer algo más?",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",
@@ -848,11 +852,11 @@ export default  [
     // Pregunta 10 Bogota Cundinamarca
     {
         "id": 10,
-        "personaje": "Laura Ojeda",
-        "contenido": "Hola soy Laura Ojeda y vivo en Bogotá. Estoy pensativa porque he subido mucho de peso y casi no puedo respirar cuando estoy corriendo. Les envío la foto de mi almuerzo, casi siempre como salchipapas, hamburguesa o perro caliente. Me encantan :) ¿Las comidas rápidas son muy malas para la salud?",
+        "contenido": "Hola soy Laura Ojeda y vivo en Bogotá. Estoy pensativa porque he subido mucho de peso y casi no puedo respirar cuando estoy corriendo.",
+        "pregunta_personaje": " Les envío la foto de mi almuerzo, casi siempre como salchipapas, hamburguesa o perro caliente. Me encantan :) ¿Las comidas rápidas son muy malas para la salud? ",
         "preguntas" : [
             {
-                "titulo": "¿Qué tipo de alimentos crees que consume?",
+                "titulo": "¿Qué tipo de alimento ves en este plato? ¡Yo veo varios! Dinos uno que veas.",
                 "opciones": [
                     {
                         "titulo": "1 grupo",

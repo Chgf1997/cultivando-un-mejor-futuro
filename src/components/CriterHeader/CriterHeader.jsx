@@ -9,7 +9,8 @@ import BarScore from './BarScore/BarScore'
 
 function CriterHeader({ 
     estado: {intentos, puntaje, puntajeMax},
-    handleChangeEscena
+    handleChangePyramid,
+    restartGame
 }) {
     return (
         <>
@@ -34,11 +35,11 @@ function CriterHeader({
                 <div id="header-icons-menu">
                     <img src={vect_piramide} 
                         className="header_icon" 
-                        onClick={()=> handleChangeEscena('pyramid')}
+                        onClick={handleChangePyramid}
                     />
                     <img src={vect_home} 
                         className="header_icon" 
-                        onClick={()=>handleChangeEscena('home')}
+                        onClick={restartGame}
                     />
                 </div>
             </div>

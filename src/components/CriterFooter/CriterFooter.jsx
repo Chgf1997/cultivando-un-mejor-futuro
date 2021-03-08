@@ -6,8 +6,11 @@ function CriterFooter({ estado, pregunta }) {
         <>
             {estado.modo === 'game' ? 
                 <div className="footer" >
-                    <div>
+                    <div className="footer-desc">
                         { pregunta.contenido }
+                    </div>
+                    <div className="footer-question">
+                        { pregunta.pregunta_personaje}
                     </div>
                 </div>
                 :

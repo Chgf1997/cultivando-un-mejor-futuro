@@ -6,42 +6,54 @@ export default ({
     modo,
     title = "",
     text,
-    onClick
+    onClick,
+    side
 }) => {
 
     return (
         <div
-            className="boxTalk-container"
+            className={classNames({
+                "boxTalk-container": true,
+                [side]: true
+            })}
             onClick={onClick}
         >
-            <div className={classNames({
-                [`boxTalk-${modo === "talk" ? 'feedback' : escena}`]: true,
-            })}>
-                { title && 
-                    <div className="titulo-container">
-                        <div className="titulo">
-                            { title } 
+            <div>
+                <div className={classNames({
+                    [`boxTalk-${modo === "talk" ? 'feedback' : escena}`]: true
+                })}>
+                    { title && 
+                        <div className="titulo-container">
+                            <div className="titulo">
+                                { title } 
+                            </div>
                         </div>
-                    </div>
-                }
+                    }
 
-                <div className="text-container">
-                    <div className="text">
-                        { text }
-                    </div>
-                </div>
-                {(modo === 'talk' || escena === 'feedback') &&
-                    <div 
-                        className="btn-container"
-                    >
-                        <div className="btn">
-                            siguiente <span className="fl"></span>
+                    <div className="text-container">
+                        <div className="text">
+                            { text }
                         </div>
                     </div>
-                }
-            </div>
-            <div className="boxTalk-fl-container">
-                <div className="boxTalk-fl" />
+                    {(modo === 'talk' || escena === 'feedback') &&
+                        <div 
+                            className="btn-container"
+                        >
+                            <div className="btn">
+                                siguiente <span className="fl"></span>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div className={classNames({
+                    "boxTalk-fl-container": true,
+                    [side]: true
+                })}>
+                    <div className={classNames({ 
+                        "boxTalk-fl" : true,
+                        [side]: true
+                    })}/>
+                </div>
             </div>
         
         </div>

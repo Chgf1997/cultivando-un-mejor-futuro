@@ -128,7 +128,7 @@ export default () => {
     };
 
     const iniciar = () => {
-        let foodListData = dataQuestion;
+        let foodListData = [...dataQuestion];
         let food = foodListData.shift();
 // question
 // answer
@@ -182,14 +182,9 @@ export default () => {
         setPregunta(question);
     }
 
-    const handleChangeEscena = (type) => {
+    const handleChangePyramid = (type) => {
 
-        if (type === 'pyramid' && estado.escena === 'pyramid')
-        {
-            return ;
-        }
-        
-        if (type === 'pyramid'){
+        if (estado.escena !== 'pyramid'){
             let newEstado = {
                 ...estado,
                 escena: 'pyramid',
@@ -199,7 +194,7 @@ export default () => {
             }
 
             setEstado(newEstado)
-        }else if (estado.escena === 'pyramid' && estado.prevModo) {
+        }else {
             setEstado({
                 ...estado,
                 prevModo: null,
@@ -210,8 +205,8 @@ export default () => {
         }
     }
 
-    const gameOver = () => {
-        console.log('gameOver')
+    const restartGame = () => {
+        iniciar();
     }
 
     useEffect(()=> {
@@ -231,8 +226,8 @@ export default () => {
                         <div className="game">
                             <CriterHeader 
                                 estado={estado} 
-                                handleChangeEscena={handleChangeEscena}
-                                gameOver={gameOver}
+                                handleChangePyramid={handleChangePyramid}
+                                restartGame={restartGame}
                             />
 
                             <div className="box-game">

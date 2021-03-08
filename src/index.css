@@ -110,9 +110,17 @@ body {
     height: 30%;
   }
 
-  .feedback-container {
+  /* .feedback-container {
     height: 100%;
     top:0;
+  } */
+
+  .personage {
+    height: 30%;
+  }
+
+  .personage img {
+    height: 100%;
   }
 
   .footer {
@@ -122,41 +130,81 @@ body {
 
   .options-container {
     width: 30%;
-    height: 100%;
   }
 
   .titulo-comida {
     font-size: 10px;
   }
 
-  .personage img {
-    height: 22vh;
+  .boxTalk-container {
+    top: -150px;
+    /* width: 100px; */
   }
 
-  .boxTalk-container {
-    top: -90px;
-    left: 10px;
+  .boxTalk-container.left {
+    position: relative;
+    left: 100px;
   }
-  .boxTalk-question{
-    width: 150px;
-    font-size: 12px;
-    padding: 10px;
+
+  .boxTalk-container.right {
+    position: relative;
+    right: 100px;
   }
 
   .boxTalk-feedback {
+    width: 130px;
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .boxTalk-question {
     width: 150px;
     font-size: 10px;
     padding: 10px;
   }
 
-  .boxTalk-fl {
+  .boxTalk-fl.left {
     width: 0; 
     height: 0; 
 
     /* border: 40px solid white; */
-    border-left: 15px solid transparent;
-    border-top: 15px solid white;
-    border-right: 15px solid white;
-    border-bottom: 15px solid transparent;
-  } 
+    border-right: 12px solid transparent;
+    border-top: 12px solid white;
+    border-left: 12px solid white;
+    border-bottom: 12px solid transparent;
+  }
+
+  .boxTalk-fl.right {
+      width: 0; 
+      height: 0; 
+
+      /* border: 40px solid white; */
+      border-left: 12px solid transparent;
+      border-top: 12px solid white;
+      border-right: 12px solid white;
+      border-bottom: 12px solid transparent;
+  }
+
+} 
+
+
+@media only screen and (max-width: 550px) {
+  .personage {
+    height: 22%;
+  }
+  
+  .boxTalk-container {
+    top: -50px;
+  }
+
+  .boxTalk-container.left {
+    position: relative;
+    left: 80px;
+  }
+
+  .boxTalk-container.right {
+    position: relative;
+    right: 80px;
+  }
+
 }

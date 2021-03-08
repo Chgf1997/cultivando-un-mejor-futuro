@@ -16,12 +16,11 @@
     align-items: flex-end;
     /* top: -400px; */
 
-    /* z-index: -1; */
+    z-index: 1;
 }
-/* .feedback-container.small {
-    height: 100%;
-    top:0;
-} */
+.feedback-container.back {
+    z-index: -1;
+}
 
 .feedback-bg-container {
     position: absolute;
@@ -45,4 +44,7 @@
 .persons-container {
     position: absolute;
     width: 100%;
+
+    display: flex;
+    justify-content: space-between;
 }

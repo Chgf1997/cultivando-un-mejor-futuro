@@ -1,9 +1,6 @@
 #header-container {
     width: 100%;
-    /* width: var(--question-width);
-    min-width: var(--question-min-width); */
-    height: 10%;
-    /* margin: var(--header-margin) auto 0px; */
+    min-height: 10%;
 
     display: flex;
     align-items: center;
