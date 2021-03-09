@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import "./Content.css";
 
-import imgPyramid from '../../assets/vectores/VEC_PIRAMIDE_2.svg'
+import imgPyramid from '../../assets/vectores/VEC_PIRAMIDE_1.svg'
 
 import food_1 from "../../assets/comidas/01.png"
 import food_2 from "../../assets/comidas/02.png"
