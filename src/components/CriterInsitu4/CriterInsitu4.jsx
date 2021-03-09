@@ -150,7 +150,8 @@ export default () => {
     };
 
     const tutorial = () => {
-        let question = introConversation.shift();
+        let question = introConversation[0];
+        setConversationIntro([...introConversation].splice(1,));
 
         setEstado({
             modo: 'talk',
@@ -162,7 +163,8 @@ export default () => {
     }
 
     const continuarTuto = () => {
-        let question = introConversation.shift();
+        let question = conversationIntro[0];
+        setConversationIntro([...conversationIntro].splice(1,));
 
         if (!question){
             // Se acabaron las preguntas, comenzar juego
@@ -182,7 +184,7 @@ export default () => {
         setPregunta(question);
     }
 
-    const handleChangePyramid = (type) => {
+    const handleChangePyramid = () => {
 
         if (estado.escena !== 'pyramid'){
             let newEstado = {
@@ -206,7 +208,7 @@ export default () => {
     }
 
     const restartGame = () => {
-        iniciar();
+        tutorial();
     }
 
     useEffect(()=> {

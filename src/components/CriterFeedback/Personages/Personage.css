@@ -29,6 +29,6 @@
 }
 
 .personage img {
-    /* height: 30%; */
-    height: 250px;
+    height: 50vh;
+    /* height: 250px; */
 }

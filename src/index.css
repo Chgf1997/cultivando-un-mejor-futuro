@@ -90,6 +90,16 @@ body {
   width: 100%;
 }
 
+@media only screen and (max-width: 1120px) {
+  .personage img {
+    height: 40vh;
+  }
+
+  .boxTalk-container {
+    height: 60%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .content.intro {
     width: 100%;
@@ -115,13 +125,6 @@ body {
     top:0;
   } */
 
-  .personage {
-    height: 30%;
-  }
-
-  .personage img {
-    height: 100%;
-  }
 
   .footer {
     height: auto;
@@ -136,30 +139,15 @@ body {
     font-size: 10px;
   }
 
-  .boxTalk-container {
-    top: -150px;
-    /* width: 100px; */
-  }
-
-  .boxTalk-container.left {
-    position: relative;
-    left: 100px;
-  }
-
-  .boxTalk-container.right {
-    position: relative;
-    right: 100px;
-  }
-
   .boxTalk-feedback {
-    width: 130px;
-    font-size: 10px;
+    width: 200px;
+    /* font-size: 10px; */
     padding: 10px;
   }
 
   .boxTalk-question {
-    width: 150px;
-    font-size: 10px;
+    width: 200px;
+    /* font-size: 10px; */
     padding: 10px;
   }
 
@@ -184,27 +172,58 @@ body {
       border-right: 12px solid white;
       border-bottom: 12px solid transparent;
   }
-
 } 
 
-
-@media only screen and (max-width: 550px) {
-  .personage {
-    height: 22%;
+@media only screen and (max-width: 800px) {
+  .personage img {
+    height: 30vh;
   }
-  
+
   .boxTalk-container {
-    top: -50px;
+    height: 72%;
   }
 
-  .boxTalk-container.left {
+  .boxTalk-feedback {
+    width: 150px;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .boxTalk-question {
+    width: 150px;
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .personage img {
+    height: 22vh;
+  }
+
+  .boxTalk-container {
+    height: 90%;
+  }
+
+  .boxTalk-feedback {
+    width: 120px;
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .boxTalk-question {
+    width: 120px;
+    font-size: 10px;
+    padding: 10px;
+  }
+
+    .boxTalk-container.left {
     position: relative;
-    left: 80px;
+    left: 100px;
   }
 
   .boxTalk-container.right {
     position: relative;
-    right: 80px;
+    right: 100px;
   }
-
 }

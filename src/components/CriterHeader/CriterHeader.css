@@ -10,6 +10,9 @@
     border-right-color: 24px solid var(--azul-secd);
     
     font-family: "Bungee";
+
+    position: relative;
+    z-index: 50;
 }
 
 #header-icons-info {
@@ -25,37 +28,18 @@
     width: 30%;
     min-width: 20px;
     max-width: 40px;
-    /* height: calc(100% - 10px); */
-    /* margin: 5px 2px; */
+    cursor: pointer;
+    
 }
-/* .header_icon:first-of-type {
-    margin-left: 20px;
-}
-.header_icon:last-of-type {
-    margin-left: auto;
-    margin-right: 20px;
-} */
+
 #header-icons-menu {
     width: 20%;
     display: flex;
     justify-content: space-around;
 }
 
-#header-icons-menu .header_icon {
-    cursor: pointer;
-}
-
 #header-puntaje {
     width: 60%;
-    /* width: 40%;
-    display: table;
-    color: white;
-    font: 24px Roboto;
-    font-weight: bold;
-    padding: 10px;
-    margin: -71px auto 8px; */
-    /* background-color: var(--verde-ppal); */
-    /* border-top: var(--header-margin) solid var(--verde-secd); */
 }
 
 #header-puntaje .text {

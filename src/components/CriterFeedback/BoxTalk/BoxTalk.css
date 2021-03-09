@@ -1,23 +1,19 @@
 .boxTalk-container {
     position: absolute;
-    height: 100%;
+    height: 50%;
     /* width: 200px; */
     z-index: 8000;
-    top: -250px;
+    /* top: -350px; */
 
     display: flex;
     align-items: flex-end;
-}
-
-.boxTalk-container.left {
-    /* left: 80px; */
 }
 
 .boxTalk-question {
     /* position: absolute; */
     margin-left: 10px;
     
-    width: 150px;
+    width: 260px;
 
     padding-left: 12px;
     padding-right: 12px;
@@ -103,13 +99,6 @@
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
 }
-
-/* .boxTalk-fl-container.left {
-    width: 200px;
-    display: flex; 
-    justify-content: center;
-} */
-
 
 .boxTalk-fl-container.left {
     width: auto;
